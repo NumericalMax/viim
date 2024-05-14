@@ -1,0 +1,8 @@
+pandas
+numpy
+matplotlib
+seaborn
+xgboost
+scipy
+scitkit-learn
+shap

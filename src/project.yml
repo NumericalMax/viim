@@ -1,0 +1,29 @@
+name: EyeTest
+options:
+  bundleIdPrefix: todo
+packages:
+  FTKit:
+    url: https://github.com/dhg-applab/FTKit.git
+    branch: main
+targets:
+  EyeSquintingTest:
+    type: application
+    platform: iOS
+    deploymentTarget: "16.3"
+    sources: [EyeTest]
+    settings:
+      TARGETED_DEVICE_FAMILY: 1
+      PRODUCT_NAME: EyeTest
+      INFOPLIST_FILE: EyeTest/Supporting Files/Info.plist
+    dependencies:
+     - package: FTKit
+    preBuildScripts:
+      - script: |
+                if [ "${CONFIGURATION}" == "Debug" ]; then
+                  export PATH="$PATH:/opt/homebrew/bin"
+                  if which swiftlint > /dev/null; then
+                    swiftlint
+                  else
+                    echo "warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint"
+                  fi
+                fi
