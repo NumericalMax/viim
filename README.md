@@ -17,6 +17,10 @@ Visual impairment (viim) is a widespread condition that affects individuals acro
 
 Note that the paths are relative and must be executed from the correct location, which is normally the same as the folder in which the script is located.
 
+## Acknowledgement
+
+As the commit history must be hidden, this repository does not contain any information about the authors of the source code. The authors include [Julian Ostarek](https://github.com/jlnstrk), [Efe Berk Ergüleç](https://github.com/efeerg), [Florian Schweizer](https://github.com/chFlorian), [Elena Mille](https://github.com/elmille) and [Maximilian Kapsecker](https://github.com/NumericalMax).
+
 ## Cite
 
 If you use this software in your (research) project, please cite the following article: TBD
