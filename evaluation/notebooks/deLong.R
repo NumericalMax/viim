@@ -1,27 +1,3 @@
-if (FALSE) {
-df_subject <- ROC_analysis[ROC_analysis$suppress_squinting == "True", ]
-
-roc_cheekSquint <- roc(df_subject$label_bin, df_subject$cheekSquint_Lmax)
-ci_roc <- ci.auc(roc_cheekSquint, method = "delong", boot.n = 2000, conf.level = 0.95)
-
-
-suppress_squint <- c("True", "False")
-aggregations <- c("min", "max", "mean", "std")
-
-for (squint in suppress_squint) {
-  df <- ROC_analysis[ROC_analysis$suppress_squinting == "True", ]
-  for (aggregation in aggregations) {
-    matching_columns <- names(df)[grep(aggregation, names(df))]
-    for (col in matching_columns) {
-      
-      roc <- roc(df[["label_bin"]], df[[col]])
-      ci_roc <- ci.auc(roc, method = "delong", boot.n = 2000, conf.level = 0.95)
-      cat(squint, col, ci_roc)
-    }
-  }
-}
-}
-
 library(pROC)
 
 #src_data <- read.csv("~/Desktop/viim/notebooks/ROC_analysis.csv")
