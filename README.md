@@ -23,4 +23,17 @@ As the commit history must be hidden, this repository does not contain any infor
 
 ## Cite
 
-If you use this software in your (research) project, please cite the following article: TBD
+If you use this software in your (research) project, please cite the following article:
+
+```
+@article{kapsecker2025mlogmar,
+  title={Facial landmark analysis for detecting visual impairment in Mobile LogMAR Test},
+  author={Kapsecker, Maximilian and Mille, Elena and Schweizer, Florian and Klinker, Jens and Yu, Joe and Leube, Alexander and Jonas, Stephan M},
+  journal={IEEE Journal of Biomedical and Health Informatics},
+  volume={29},
+  number={6},
+  pages={4426--4438},
+  year={2025},
+  publisher={IEEE}
+}
+```
